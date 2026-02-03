@@ -1,0 +1,365 @@
+.virgo-showroom {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.showroom-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  background: rgba(138, 43, 226, 0.05);
+  border: 2px solid rgba(138, 43, 226, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.car-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.car-viewport {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.car-model {
+  position: relative;
+  width: 300px;
+  height: 150px;
+}
+
+.car-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #8a2be2, #4b0082);
+  border-radius: 20px 20px 10px 10px;
+  box-shadow: 0 10px 40px rgba(138, 43, 226, 0.5);
+  transform: translateZ(20px);
+}
+
+.car-top {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  right: 50px;
+  height: 60px;
+  background: linear-gradient(135deg, #9932cc, #6a0dad);
+  border-radius: 15px 15px 0 0;
+  box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.car-front::before,
+.car-front::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  width: 40px;
+  height: 40px;
+  background: #333;
+  border-radius: 50%;
+  border: 3px solid #666;
+}
+
+.car-front::before {
+  left: 20px;
+}
+
+.car-front::after {
+  right: 20px;
+}
+
+.car-shadow {
+  position: absolute;
+  bottom: -20px;
+  left: 10%;
+  right: 10%;
+  height: 10px;
+  background: radial-gradient(ellipse, rgba(0, 0, 0, 0.5), transparent);
+  border-radius: 50%;
+}
+
+.view-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.view-controls button {
+  padding: 0.5rem 1rem;
+  background: rgba(138, 43, 226, 0.3);
+  border: 1px solid rgba(138, 43, 226, 0.5);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-controls button:hover {
+  background: rgba(138, 43, 226, 0.5);
+  transform: translateY(-2px);
+}
+
+.car-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.car-info h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.model-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, gold, #ffed4e);
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  align-self: flex-start;
+}
+
+.specs-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.spec-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(138, 43, 226, 0.1);
+  border-radius: 8px;
+}
+
+.spec-icon {
+  font-size: 2rem;
+}
+
+.spec-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.spec-value {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #da70d6;
+}
+
+.price-section {
+  background: rgba(138, 43, 226, 0.15);
+  border: 2px solid rgba(138, 43, 226, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.price-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+.price-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, gold, #ffed4e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.availability {
+  margin-top: 0.5rem;
+}
+
+.available {
+  color: #00ff88;
+  font-weight: bold;
+}
+
+.sold-out {
+  color: #ff4444;
+  font-weight: bold;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, gold, #ffed4e);
+  color: #000;
+}
+
+.primary-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+}
+
+.primary-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  background: rgba(138, 43, 226, 0.3);
+  border: 1px solid rgba(138, 43, 226, 0.5);
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: rgba(138, 43, 226, 0.5);
+}
+
+.car-selector {
+  margin-bottom: 3rem;
+}
+
+.car-selector h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.car-card {
+  background: rgba(138, 43, 226, 0.1);
+  border: 2px solid rgba(138, 43, 226, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(138, 43, 226, 0.6);
+  box-shadow: 0 8px 24px rgba(138, 43, 226, 0.3);
+}
+
+.car-card.selected {
+  border-color: gold;
+  box-shadow: 0 0 24px rgba(255, 215, 0, 0.5);
+}
+
+.car-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.car-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.car-model-tag {
+  display: inline-block;
+  background: rgba(138, 43, 226, 0.3);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+}
+
+.car-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: gold;
+  margin-top: 0.5rem;
+}
+
+.showroom-features h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: rgba(138, 43, 226, 0.1);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(138, 43, 226, 0.6);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .showroom-main {
+    grid-template-columns: 1fr;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+}
