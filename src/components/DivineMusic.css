@@ -1,0 +1,225 @@
+.divine-music {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, #8a2be2, #da70d6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+}
+
+.player-section {
+  background: rgba(138, 43, 226, 0.1);
+  border: 2px solid rgba(138, 43, 226, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active-player {
+  width: 100%;
+  text-align: center;
+}
+
+.frequency-visualizer {
+  margin-bottom: 2rem;
+}
+
+.frequency-wave {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 8px;
+  height: 100px;
+}
+
+.wave-bar {
+  width: 12px;
+  background: linear-gradient(180deg, #8a2be2, #4b0082);
+  border-radius: 6px;
+  animation: wave 1s ease-in-out infinite;
+}
+
+.frequency-wave.playing .wave-bar:nth-child(1) { animation-delay: 0s; height: 30px; }
+.frequency-wave.playing .wave-bar:nth-child(2) { animation-delay: 0.1s; height: 50px; }
+.frequency-wave.playing .wave-bar:nth-child(3) { animation-delay: 0.2s; height: 80px; }
+.frequency-wave.playing .wave-bar:nth-child(4) { animation-delay: 0.3s; height: 50px; }
+.frequency-wave.playing .wave-bar:nth-child(5) { animation-delay: 0.4s; height: 30px; }
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.5); }
+  50% { transform: scaleY(1); }
+}
+
+.track-info h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.frequency-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #8a2be2, #4b0082);
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+  margin: 1rem 0;
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.3);
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.control-btn {
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, #8a2be2, #4b0082);
+  border: 1px solid gold;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(138, 43, 226, 0.5);
+}
+
+.control-btn.secondary {
+  background: rgba(138, 43, 226, 0.3);
+  border-color: rgba(138, 43, 226, 0.5);
+}
+
+.player-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+}
+
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.track-card {
+  background: rgba(138, 43, 226, 0.1);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.track-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(138, 43, 226, 0.6);
+  box-shadow: 0 8px 24px rgba(138, 43, 226, 0.3);
+}
+
+.track-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.track-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.frequency-tag {
+  display: inline-block;
+  background: rgba(138, 43, 226, 0.3);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  color: gold;
+}
+
+.track-card p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.play-btn {
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(135deg, #8a2be2, #4b0082);
+  border: 1px solid rgba(138, 43, 226, 0.5);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.play-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #9932cc, #6a0dad);
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.4);
+}
+
+.play-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spotify-integration {
+  background: rgba(30, 215, 96, 0.1);
+  border: 2px solid rgba(30, 215, 96, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.spotify-integration h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.spotify-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background: #1DB954;
+  border: none;
+  color: white;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.spotify-btn:hover {
+  background: #1ed760;
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(30, 215, 96, 0.4);
+}

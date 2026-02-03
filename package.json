@@ -1,0 +1,29 @@
+{
+  "name": "omnitech1-portal",
+  "version": "1.0.0",
+  "description": "Omnitech1 Portal of Infinity - The greatest one-stop sovereign platform to unify all systems. Features divine music encoded with sacred frequencies, NFT portals, AI dashboards, Virgo Veil automotive showroom, social command, treasury analytics, and ScrollChain NFTs. Eternal evolution: built for infinite scalability.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": ["omnitech", "portal", "infinity", "nft", "defi", "web3", "ethereum", "layerzero", "react"],
+  "author": "Omnitech1",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@layerzerolabs/scan-client": "^0.0.8",
+    "axios": "^1.13.4",
+    "ethers": "^6.16.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.3",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  }
+}
