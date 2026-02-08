@@ -51,7 +51,7 @@ const generateMockLogs = (count: number, startId: number): LogEntry[] => {
   })
 }
 
-function ScrollVerseMasterDashboard() {
+function OperationalDashboard() {
   // State
   const [activeLogTab, setActiveLogTab] = useState<'all' | LogEntry['category']>('all')
   const [logs, setLogs] = useState<LogEntry[]>([])
@@ -523,4 +523,4 @@ function ScrollVerseMasterDashboard() {
   )
 }
 
-export default ScrollVerseMasterDashboard
+export default OperationalDashboard

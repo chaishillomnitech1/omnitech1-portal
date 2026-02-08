@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Shield, Infinity, Globe, Music, Zap, Lock } from 'lucide-react'
 
-function App() {
+function SpiritualDashboard() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-purple-950 to-black overflow-hidden">
       {/* Animated Background Effects */}
@@ -141,4 +141,4 @@ function App() {
   )
 }
 
-export default App
+export default SpiritualDashboard
