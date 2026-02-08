@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './AIDashboard.css'
+import InteractiveToolsPanel from './InteractiveToolsPanel'
 
 interface Metric {
   name: string
@@ -150,6 +151,10 @@ function AIDashboard() {
             )}
           </svg>
         </div>
+      </div>
+
+      <div className="interactive-tools-section">
+        <InteractiveToolsPanel />
       </div>
     </div>
   )
