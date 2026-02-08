@@ -255,7 +255,7 @@ class TRONBridgeClient {
   /**
    * Verify TRON address format
    */
-  isValidTRONAddress(address: string): boolean {
+  isValidTronAddress(address: string): boolean {
     try {
       if (!this.tronWeb) {
         return false
@@ -269,7 +269,7 @@ class TRONBridgeClient {
   /**
    * Convert Ethereum address to TRON address (hex to base58)
    */
-  convertEthToTRON(ethAddress: string): string {
+  convertEthToTron(ethAddress: string): string {
     try {
       // This is a simplified conversion - actual implementation would use proper conversion
       // For development, we'll use a mock conversion

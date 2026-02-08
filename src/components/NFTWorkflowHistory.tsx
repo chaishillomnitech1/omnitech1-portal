@@ -153,7 +153,7 @@ function NFTWorkflowHistory() {
                 </div>
                 <div className="event-content">
                   <div className="event-header">
-                    <h4>{event.eventType.replace('_', ' ').toUpperCase()}</h4>
+                    <h4>{event.eventType.replace(/_/g, ' ').toUpperCase()}</h4>
                     <span className={`status-badge ${event.status}`}>{event.status}</span>
                   </div>
                   <div className="event-details">
