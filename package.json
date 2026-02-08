@@ -32,7 +32,8 @@
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-infinite-scroll-component": "^6.1.1",
-    "react-router-dom": "^7.13.0"
+    "react-router-dom": "^7.13.0",
+    "tronweb": "^6.2.0"
   },
   "devDependencies": {
     "@types/react": "^19.2.10",

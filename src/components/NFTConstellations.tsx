@@ -15,7 +15,9 @@ const nftCollection: NFT[] = [
   { id: 3, name: 'Nebula Serpent', constellation: 'Serpens', chain: 'LayerZero', rarity: 'Rare' },
   { id: 4, name: 'Galactic Lion', constellation: 'Leo', chain: 'Ethereum', rarity: 'Epic' },
   { id: 5, name: 'Andromeda Spirit', constellation: 'Andromeda', chain: 'Scroll', rarity: 'Legendary' },
-  { id: 6, name: 'Orion Guardian', constellation: 'Orion', chain: 'LayerZero', rarity: 'Mythic' }
+  { id: 6, name: 'Orion Guardian', constellation: 'Orion', chain: 'LayerZero', rarity: 'Mythic' },
+  { id: 7, name: 'TRON Genesis', constellation: 'Cygnus', chain: 'TRON', rarity: 'Legendary' },
+  { id: 8, name: 'Digital Singularity', constellation: 'Cassiopeia', chain: 'TRON', rarity: 'Mythic' }
 ]
 
 function NFTConstellations() {
