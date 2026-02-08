@@ -6,8 +6,9 @@ import AIDashboard from './components/AIDashboard'
 import VirgoVeilShowroom from './components/VirgoVeilShowroom'
 import TreasuryAnalytics from './components/TreasuryAnalytics'
 import SocialCommand from './components/SocialCommand'
+import ScrollVerseMasterDashboard from './components/ScrollVerseMasterDashboard'
 
-type Tab = 'music' | 'nft' | 'ai' | 'virgo' | 'treasury' | 'social'
+type Tab = 'music' | 'nft' | 'ai' | 'virgo' | 'treasury' | 'social' | 'scrollverse'
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('music')
@@ -61,6 +62,12 @@ function App() {
         >
           📡 Social Command
         </button>
+        <button 
+          className={`nav-btn ${activeTab === 'scrollverse' ? 'active' : ''}`}
+          onClick={() => setActiveTab('scrollverse')}
+        >
+          ∞ ScrollVerse
+        </button>
       </nav>
 
       <main className="main-content">
@@ -70,6 +77,7 @@ function App() {
         {activeTab === 'virgo' && <VirgoVeilShowroom />}
         {activeTab === 'treasury' && <TreasuryAnalytics />}
         {activeTab === 'social' && <SocialCommand />}
+        {activeTab === 'scrollverse' && <ScrollVerseMasterDashboard />}
       </main>
 
       <footer className="footer">
