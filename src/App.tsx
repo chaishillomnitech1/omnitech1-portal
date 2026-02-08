@@ -2,13 +2,14 @@ import { useState } from 'react'
 import './App.css'
 import DivineMusic from './components/DivineMusic'
 import NFTConstellations from './components/NFTConstellations'
+import NFTWorkflowHistory from './components/NFTWorkflowHistory'
 import AIDashboard from './components/AIDashboard'
 import VirgoVeilShowroom from './components/VirgoVeilShowroom'
 import TreasuryAnalytics from './components/TreasuryAnalytics'
 import SocialCommand from './components/SocialCommand'
 import ScrollVerseMasterDashboard from './components/ScrollVerseMasterDashboard'
 
-type Tab = 'music' | 'nft' | 'ai' | 'virgo' | 'treasury' | 'social' | 'scrollverse'
+type Tab = 'music' | 'nft' | 'workflows' | 'ai' | 'virgo' | 'treasury' | 'social' | 'scrollverse'
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('music')
@@ -37,6 +38,12 @@ function App() {
           onClick={() => setActiveTab('nft')}
         >
           ✨ NFT Constellations
+        </button>
+        <button 
+          className={`nav-btn ${activeTab === 'workflows' ? 'active' : ''}`}
+          onClick={() => setActiveTab('workflows')}
+        >
+          🌌 NFT Workflows
         </button>
         <button 
           className={`nav-btn ${activeTab === 'ai' ? 'active' : ''}`}
@@ -73,6 +80,7 @@ function App() {
       <main className="main-content">
         {activeTab === 'music' && <DivineMusic />}
         {activeTab === 'nft' && <NFTConstellations />}
+        {activeTab === 'workflows' && <NFTWorkflowHistory />}
         {activeTab === 'ai' && <AIDashboard />}
         {activeTab === 'virgo' && <VirgoVeilShowroom />}
         {activeTab === 'treasury' && <TreasuryAnalytics />}
