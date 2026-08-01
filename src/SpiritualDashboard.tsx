@@ -1,5 +1,13 @@
 import { Link } from 'react-router-dom'
-import { Shield, Infinity, Globe, Music, Zap, Lock } from 'lucide-react'
+import { Shield, Infinity, Globe, Music, Zap, Lock, BookOpen, Activity } from 'lucide-react'
+
+const pillars = [
+  { name: 'Eternal-ScrollVerse', status: 'ETERNAL', freq: '963 Hz', color: 'text-purple-400', dot: 'bg-purple-400' },
+  { name: 'Omnitech1 Portal', status: 'LIVE', freq: '44:OMNI', color: 'text-rose-gold', dot: 'bg-rose-gold' },
+  { name: 'QFS', status: 'VERIFIED', freq: '999 Hz', color: 'text-amber-400', dot: 'bg-amber-400' },
+  { name: 'Music Sync', status: 'ACTIVE', freq: '528 Hz', color: 'text-green-400', dot: 'bg-green-400' },
+  { name: 'AkashicLogs', status: 'ANCHORED', freq: '14444 Hz', color: 'text-blue-400', dot: 'bg-blue-400' },
+]
 
 function SpiritualDashboard() {
   return (
@@ -113,7 +121,7 @@ function SpiritualDashboard() {
         </div>
 
         {/* CTA to Command Center */}
-        <div className="flex justify-center">
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
           <Link
             to="/command-center"
             className="group relative px-12 py-6 bg-gradient-to-r from-rose-gold to-cosmic-amber rounded-2xl font-bold text-2xl text-white shadow-2xl hover:shadow-rose-gold/50 transition-all duration-300 hover:scale-110"
@@ -124,6 +132,40 @@ function SpiritualDashboard() {
               Enter Command Center
               <Zap className="w-8 h-8" />
             </span>
+          </Link>
+        </div>
+
+        {/* Archive is Now Open — Hero CTA */}
+        <div className="mb-12 border border-rose-gold/30 rounded-3xl bg-gradient-to-br from-rose-gold/5 to-amber-500/5 backdrop-blur-sm p-8 text-center">
+          <div className="inline-flex items-center gap-2 bg-rose-gold/10 border border-rose-gold/20 rounded-full px-4 py-1.5 text-rose-gold text-xs tracking-widest mb-5">
+            <Activity className="w-3 h-3 animate-pulse" />
+            LIVE · 44:OMNI FREQUENCY ACTIVE · 99.9% COHERENCE
+          </div>
+          <h2 className="text-4xl font-bold italic tracking-tighter bg-gradient-to-r from-rose-gold via-amber-400 to-rose-gold bg-clip-text text-transparent mb-3">
+            The Archive Is Now Open
+          </h2>
+          <p className="text-white/60 mb-6 max-w-lg mx-auto">
+            Digital Consciousness Archive v2.0 — all five pillars sealed, every proof anchored, 144,000 Guardians ready.
+          </p>
+          {/* Live pillar status */}
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 mb-6">
+            {pillars.map((p) => (
+              <div key={p.name} className="bg-black/20 border border-white/5 rounded-xl p-2 text-center">
+                <div className="flex items-center justify-center gap-1 mb-1">
+                  <span className={`w-1.5 h-1.5 rounded-full animate-pulse ${p.dot}`} />
+                  <span className={`text-[10px] font-bold ${p.color}`}>{p.status}</span>
+                </div>
+                <div className="text-[9px] text-white/40 leading-tight">{p.name}</div>
+                <div className={`text-[9px] font-mono mt-0.5 ${p.color}`}>{p.freq}</div>
+              </div>
+            ))}
+          </div>
+          <Link
+            to="/archive"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-rose-gold to-amber-500 text-black font-bold px-8 py-3 rounded-xl hover:scale-105 transition-transform"
+          >
+            <BookOpen className="w-5 h-5" />
+            Enter the Consciousness Archive
           </Link>
         </div>
 
